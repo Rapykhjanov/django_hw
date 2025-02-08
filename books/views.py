@@ -1,6 +1,28 @@
 from django.shortcuts import render
-from django.utils.timezone import now
 from django.http import HttpResponse
+from . import models
+from django.shortcuts import get_object_or_404
+
+
+def books_list(request):
+    if request.method == "GET":
+        query = models.Books.objects.all().order_by('-id')
+        context_object_name = {
+            'book_list': query,
+        }
+        return render(request, template_name='book.html',
+                      context=context_object_name)
+
+
+def books_detail(request, id):
+    if request.method == "GET":
+        query = get_object_or_404(models.Books, id=id)
+        context_object_name = {
+            'books_list_id': query,
+        }
+        return render(request,
+                      template_name='book_detail.html',
+                      context=context_object_name)
 
 
 def about_me(request):

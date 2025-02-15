@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Список товары</h1>
+<ul>
+  {% for i in market_view %}
+  <li>
+    <p>{{ i.name }}</p>
+    <p>{{ i.email }}</p>
+    <p>{{ i.numbers }}</p>
+    <p>{{ i.books }}</p>
+    <p>{{ i.created_at }}</p>
+  </li>
+  {% endfor %}
+</ul>
+</body>
+</html>

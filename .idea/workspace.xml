@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1d2e5b5-b37d-4b22-9980-ea8c58a87c95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products_cloth/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/hastags.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/components/footer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/components/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products_cloth/adults.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products_cloth/all_products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products_cloth/kids.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products_cloth/teenager.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/market/market_view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/todo/create_todo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/todo/todo_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/todo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/books/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/books/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/book_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/book_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +101,11 @@
       <workItem from="1739297587115" duration="2583000" />
       <workItem from="1739303843503" duration="2056000" />
       <workItem from="1739347770303" duration="2382000" />
+      <workItem from="1739357560284" duration="742000" />
+      <workItem from="1739437591709" duration="2581000" />
+      <workItem from="1739525251463" duration="9168000" />
+      <workItem from="1739543627819" duration="10848000" />
+      <workItem from="1739611117511" duration="1486000" />
     </task>
     <servers />
   </component>

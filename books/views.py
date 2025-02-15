@@ -25,6 +25,7 @@ def books_detail(request, id):
                       context=context_object_name)
 
 
+
 def about_me(request):
     if request.method == "GET":
         return HttpResponse('Привет! Я Сардор , люблю Django!')

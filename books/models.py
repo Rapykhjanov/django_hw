@@ -49,5 +49,5 @@ class Review(models.Model):
 
     stars = models.CharField(max_length=10, choices=STARS, default='☀☀☀')
 
-    def __str__(self):
+    def __str__(self): 
         return f'{self.stars}-{self.choices_books.title}'

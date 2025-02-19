@@ -1,10 +1,16 @@
 from django.shortcuts import render
-from . import models
+from django.views import View
+from .models import MarketModel
 
-def market_view(request):
-    if request.method == 'GET':
-        query = models.MarketModel.objects.all()
-        context = {
-            'market': query,
-        }
-        return render(request, template_name='market_view.html', context=context)
+
+class MarketView(View):
+    def get(self, request):
+        context = {}
+        try:
+            query = MarketModel.objects.all()
+            context['market'] = query
+        except MarketModel.DoesNotExist:
+            context['error'] = 'Не удалось загрузить данные.'
+
+        return render(request, 'market_view.html', context)
+

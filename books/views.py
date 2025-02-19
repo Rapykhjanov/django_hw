@@ -1,42 +1,58 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from . import models
-from django.shortcuts import get_object_or_404
+from django.views import View
+from .models import Books
+from django.utils.timezone import now
+from django.views import generic
 
 
-def books_list(request):
-    if request.method == "GET":
-        query = models.Books.objects.all().order_by('-id')
-        context_object_name = {
-            'book_list': query,
+# Поиск
+
+
+class SearchView(generic.ListView):
+    template_name = 'book.html'
+
+    def get_queryset(self):
+        search_query = self.request.GET.get('q', '')
+        return Books.objects.filter(title__icontains=search_query)
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['q'] = self.request.GET.get('q', '')
+        return context
+
+
+class BooksListView(View):
+    def get(self, request):
+        books = Books.objects.all().order_by('-id')
+        context = {
+            'book_list': books,
         }
-        return render(request, template_name='book.html',
-                      context=context_object_name)
+        return render(request, 'book.html', context)
 
 
-def books_detail(request, id):
-    if request.method == "GET":
-        query = get_object_or_404(models.Books, id=id)
-        context_object_name = {
-            'books_list_id': query,
+class BooksDetailView(View):
+    def get(self, request, id):
+        book = get_object_or_404(Books, id=id)
+        context = {
+            'book_list_id': book,
         }
-        return render(request,
-                      template_name='book_detail.html',
-                      context=context_object_name)
+        return render(request, 'book_detail.html', context)
 
 
-
-def about_me(request):
-    if request.method == "GET":
+class AboutMeView(View):
+    def get(self, request):
         return HttpResponse('Привет! Я Сардор , люблю Django!')
 
 
-def text_and_photo(request):
-    if request.method == "GET":
+class TextAndPhotoView(View):
+    def get(self, request):
         return HttpResponse(
-            'Это моя фотография! <br><img src="https://biopet.az/resized/fit1220x550/center/pages/770/fars-pisiyi-1198x540px.jpg" alt="Фото">')
+            'Это моя фотография! <br><img src="https://biopet.az/resized/fit1220x550/center/pages/770/fars-pisiyi-1198x540px.jpg" alt="Фото">'
+        )
 
 
-def system_time(request):
-    if request.method == "GET":
-        return HttpResponse(f'Текущее время: {now()}')
+class SystemTimeView(View):
+    def get(self, request):
+        current_time = now()
+        return HttpResponse(f'Текущее время: {current_time}')

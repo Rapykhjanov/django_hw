@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'products_cloth',
     'todo',
     'market',
+    'parser_app',
 ]
 
 MIDDLEWARE = [

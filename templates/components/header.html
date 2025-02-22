@@ -47,8 +47,9 @@
                     <a class="nav-link enable" href="#" style="color: yellow;">Регистрация</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link enable" href="#" style="color: yellow;">Другие книги</a>
-                </li>
+                    <a class="nav-link enable" href="{% url 'mybook_list' %}" style="color: yellow;">Другие фильмы</a>
+                <li class="nav-item">
+                    <a class="nav-link enable" href="{% url 'mybook_form' %}" style="color: yellow;">Парсинг</a>
                 <li class="nav-item">
                     <a class="nav-link enable" href="#" style="color: yellow;">Итоговая Контрольная работа</a>
                 </li>
@@ -62,5 +63,4 @@
         </div>
     </div>
 </nav>
-
 <link rel="stylesheet" href="{% static 'css/books.css' %}">

@@ -8,7 +8,8 @@ urlpatterns = [
     path('', include('books.urls')),
     path('', include('products_cloth.urls')),
     path('', include('todo.urls')),
-    path('', include('market.urls'))
+    path('', include('market.urls')),
+    path('', include('parser_app.urls')),
 
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -7,18 +7,16 @@ from django.views import generic
 
 
 # Поиск
-
-
 class SearchView(generic.ListView):
     template_name = 'book.html'
+    context_object_name = 'book_list'
 
     def get_queryset(self):
-        search_query = self.request.GET.get('q', '')
-        return Books.objects.filter(title__icontains=search_query)
+        return Books.objects.filter(title__icontains=self.request.GET.get('q'))
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['q'] = self.request.GET.get('q', '')
+        context['q'] = self.request.GET.get('q')
         return context
 
 

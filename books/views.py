@@ -33,7 +33,7 @@ class BooksDetailView(View):
     def get(self, request, id):
         book = get_object_or_404(Books, id=id)
         context = {
-            'book_list_id': book,
+            'books_list_id': book,
         }
         return render(request, 'book_detail.html', context)
 

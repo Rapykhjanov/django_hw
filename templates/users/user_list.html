@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h1>Добро пожаловать</h1>
+    <ol>
+        {% for user in person %}
+        <li>
+            <p>{{ user.username }}</p>
+            <p>{{ user.age }}</p>
+            {% if user.club %}
+            <p>Этот человек в клубе - {{ user.club }}</p>
+            {% else %}
+            <p>Клуб не определен</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ol>
+
+    <form action="{% url 'users:logout' %}" method="POST">
+        {% csrf_token %}
+        <button type="submit">Выйти из аккаунта</button>
+    </form>
+</body>
+</html>

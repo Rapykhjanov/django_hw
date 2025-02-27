@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'market',
     'parser_app',
     'work',
+    'picture',
 ]
 
 MIDDLEWARE = [

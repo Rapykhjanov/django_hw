@@ -3,7 +3,7 @@ from books.models import Books
 
 class TodoModel(models.Model):
     STATUS_CHOICES = (
-        ('Чмтал', 'Читал'),
+        ('Читал', 'Читал'),
         ('Не читал', 'Не читал'),
     )
     task = models.CharField(max_length=100)

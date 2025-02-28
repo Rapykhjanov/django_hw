@@ -11,6 +11,7 @@ urlpatterns = [
     path('', include('market.urls')),
     path('', include('parser_app.urls')),
     path('', include('work.urls')),
+    path('', include('recipe.urls')),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

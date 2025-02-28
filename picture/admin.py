@@ -5,7 +5,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 
 
-class ImageForm(forms.ModelForm):
+class  ImageForm(forms.ModelForm):
     class Meta:
         model = models.Picture
         fields = ['image']

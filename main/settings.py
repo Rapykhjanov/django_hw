@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'parser_app',
     'work',
     'picture',
+    'recipe',
 ]
 
 MIDDLEWARE = [
